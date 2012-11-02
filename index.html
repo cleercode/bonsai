@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Bonsai</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="all">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="scripts/underscore.js"></script>
+  <script type="text/javascript" src="scripts/backbone.js"></script>
+  <script type="text/javascript" src="scripts/backbone-localstorage.js"></script>
+  <script type="text/javascript" src="scripts/date.js"></script>
+  <script type="text/javascript" src="scripts/bonsai.js"></script>
+</head>
+<body>
+  <div id="sidebar">
+    <div id="header">
+      <div id="brand">Bonsai</div>
+      <div id="counter"></div>
+    </div>
+    <ul>
+      <li id="all-lists">   
+        <div class="list-circle"></div>
+        <a href="#">All lists</a>
+      </li>
+    </ul>
+    <div id="new-list-container">
+      <p id="new-list">New list</p>
+      <input type="text" name="list" id="new-list-input" placeholder="List name">
+    </div>
+    <a href="" id="clear">Clear completed</a>
+    <div id="instructions">
+      <p><strong>Enter</strong> to create a new task.</p>
+      <p><strong>&uarr; &darr;</strong> to select tasks.</p>
+      <p><strong>Tab</strong> to edit tasks.</p>
+      <p><strong>Delete</strong> to delete tasks.</p>
+    </div>
+  </div>
+  <div id="main">
+    <div id="main-header">
+      <h1>All lists</h1>
+      <a href="#" id="delete-list">Delete this list</a>
+    </div>
+    <section id="past">
+      <h2>Already due</h2>
+      <ul>
+      </ul>
+    </section>
+    <section id="days1">
+      <h2>Due today</h2>
+      <ul>
+      </ul>
+    </section>
+    <section id="days2">
+      <h2>Due tomorrow</h2>
+      <ul>
+      </ul>
+    </section>
+    <section id="days7">
+      <h2>Due in the next 7 days</h2>
+      <ul>
+      </ul>
+    </section>
+    <section id="days30">
+      <h2>Due in the next 30 days</h1>
+      <ul>
+      </ul>
+    </section>
+    <section id="days90">
+      <h2>Due in the next 90 days</h1>
+      <ul>
+      </ul>
+    </section>
+    <section id="years1">
+      <h2>Due in the next year</h1>
+      <ul>
+      </ul>
+    </section>
+    <section id="none">
+      <h2>No due date</h1>
+      <ul>
+      </ul>
+    </section>
+    <div id="new-task">
+      <a href="#">New task</a>
+    </div>
+  </div>
+
+  <script type="text/template" id="list-template">
+    <div class="list-circle" style="background-color: #<%= color %>"></div>
+    <a href="#"><%= name %></a>
+  </script>
+
+  <script type="text/template" id="task-template">
+    <div class="display<%= done ? ' completed' : '' %>">
+      <div class="checkbox"></div>
+      <div class="content"><%= content %></div>
+      <div class="date"><%= date %></div>
+    </div>
+    <div class="edit">
+      <input class="content-input" type="text" value="<%= content %>"></input>
+      <input class="date-input" type="text" value="<%= date %>"></input>
+    </div>
+  </script>
+</body>
+</html>

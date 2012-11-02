@@ -1,0 +1,368 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+footer, header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body {
+  background: #fafafa;
+  color: #444;
+  font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  overflow-y: scroll;
+  position: relative;
+  width: 782px;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #89b638;
+}
+
+input {
+  border: 1px solid #eee;
+  border-radius: 2px;
+  color: #444;
+  font: 14px/1 "Helvetica Neue", Arial, Helvetica;
+  margin: 0;
+  padding: 5px;
+}
+
+input:focus {
+  border-color: #89b638;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 5px rgba(119, 204, 51, 0.4);
+  outline: none;
+}
+
+#sidebar {
+  padding: 40px 20px 20px;
+  position: fixed;
+  width: 200px;
+}
+
+#sidebar #header {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#sidebar #brand {
+  color: #aaa;
+  float: left;
+  font-size: 24px;
+  font-weight: lighter;
+  text-transform: lowercase;
+}
+
+#sidebar #counter {
+  background: #89b638;
+  border-radius: 10px;
+  color: #fafafa;
+  float: left;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 8px 0 8px 10px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+
+#sidebar #counter.zero {
+  background: #aaa;
+}
+
+#sidebar li {
+  line-height: 24px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#sidebar li.selected {
+  font-weight: bold;
+}
+
+#sidebar .list-circle {
+  background: #ccc;
+  border-radius: 5px;
+  float: left;
+  margin: 7px 10px 7px 0;
+  width: 10px;
+  height: 10px;
+}
+
+#sidebar li.list-1 .list-circle {
+  background: red;
+}
+
+#sidebar li.list-2 .list-circle {
+  background: orange;
+}
+
+#sidebar li.list-3 .list-circle {
+  background: yellow;
+}
+
+#sidebar li.list-4 .list-circle {
+  background: green;
+}
+
+#sidebar li.list-5 .list-circle {
+  background: blue;
+}
+
+#sidebar li a {
+  float: left;
+  width: 180px;
+}
+
+#sidebar p#new-list {
+  background: url(images/add-gray.png) 0 4px no-repeat;
+  color: #aaa;
+  display: block;
+  margin-top: 20px;
+  padding-left: 22px;
+}
+
+#sidebar a#clear {
+  color: #aaa;
+  display: block;
+  margin-top: 20px;
+}
+
+#sidebar input#new-list-input {
+  margin-top: 10px;
+  width: 188px;
+}
+
+#sidebar #instructions {
+  color: #aaa;
+  margin-top: 20px;
+}
+
+#main {
+  background: #fff;
+  border: 1px solid #eee;
+  border-width: 0 1px 1px 1px;
+  box-shadow: 0 0 0 2px #f6f6f6;
+  padding: 40px 20px 20px;
+  position: absolute;
+  left: 240px;
+  width: 500px;
+}
+
+#main section {
+  display: none;
+  margin-bottom: 20px;
+}
+
+#main section:last-child {
+  margin: 0;
+}
+
+#main section#past ul, #main section#days1 ul, #main section#days2 ul, #main section#past input, #main section#days1 input, #main section#days2 input {
+  font-weight: bold;
+}
+
+#main #main-header {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#main #main-header h1 {
+  float: left;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+#main #main-header a#delete-list {
+  display: none;
+}
+
+#main #main-header:hover a#delete-list {
+  color: #ccc;
+  display: block;
+  float: right;
+  line-height: 36px;
+}
+
+#main.all #main-header a#delete-list {
+  display: none;
+}
+
+#main h2 {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 0 3px 3px 0;
+  border-left-width: 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.75);
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: -20px;
+  padding: 5px 20px;
+}
+
+#main li {
+  border-radius: 0 3px 3px 0;
+  line-height: 24px;
+  margin: 0 0 5px -20px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+#main li.selected {
+  background: #f6f6f6;
+}
+
+#main li:last-child {
+  border: none;
+  margin-bottom: 0;
+}
+
+#main li .display {
+  overflow: hidden;
+  padding: 6px 0;
+}
+
+#main li .display .checkbox {
+  background: url(images/checkbox.png);
+  float: left;
+  margin: 4px 0 6px;
+  width: 14px;
+  height: 16px;
+}
+
+#main li .display.completed {
+  color: #888;
+  text-decoration: line-through;
+}
+
+#main li .display.completed .checkbox {
+  background-position: 0 16px;
+}
+
+#main li .display.soon {
+  font-weight: bold;
+}
+
+#main li .content {
+  float: left;
+  padding: 0 10px;
+  width: 416px;
+}
+
+#main li .date {
+  float: right;
+  font-size: 11px;
+  width: 50px;
+}
+
+#main li:hover .checkbox {
+  background-position: 14px 0;
+}
+
+#main li:hover .display.completed .checkbox {
+  background-position: 14px 16px;
+}
+
+#main li:hover .content {
+  color: #89b638;
+}
+
+#main li .edit {
+  display: none;
+  overflow: hidden;
+}
+
+#main li.editing .display {
+  display: none;
+}
+
+#main li.editing .edit {
+  display: block;
+  border: 1px solid #89b638;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 5px rgba(119, 204, 51, 0.4);
+  color: #444;
+  font: 14px/1 "Helvetica Neue", Arial, Helvetica;
+  margin: 0;
+  padding: 5px 5px 7px 22px;
+}
+
+#main li .edit input {
+  background: none;
+  border: none;
+  box-shadow: none;
+  line-height: 24px;
+  padding: 0;
+}
+
+#main .content-input, #main .content-input:focus {
+  float: left;
+  margin-right: 10px;
+  width: 408px;
+}
+
+#main .date-input, #main .date-input:focus {
+  float: right;
+  font-size: 11px;
+  width: 50px;
+}
+
+#main #new-task a {
+  background: #f0f7e5 url(images/add-black.png) 10px 9px no-repeat;
+  border: 1px solid #c5df97;
+  border-radius: 3px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.75);
+  color: #444;
+  display: block;
+  margin-top: 20px;
+  padding: 5px 10px 5px 30px;
+}
+
+#main #new-task:hover a {
+  background-color: #e2efcb;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 479px) {
+  body {
+    position: relative;
+    width: 100%;
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  #main {
+    left: 0;
+    width: 90%;
+  }
+
+  #main li .content {
+    width: 268px;
+  }
+}
